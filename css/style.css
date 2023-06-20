@@ -1,0 +1,593 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+	height: 100%;
+}
+ 
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.clear{
+	clear: both;
+}
+
+.colorHF{background-color:#63c2bf;}
+.colorBarra{background-color: #839fd2;}
+.colorBtn{background-color: #2b3444;}
+.colorText{color: #221f1d;}
+.colorTextF{color: #001d4d;}
+/*classes auxiliares*/
+
+/*iniciando header*/
+header{
+	width: 100%;
+	height: 120px;
+	border-bottom: 2px solid #ccc;
+	position: fixed;
+	z-index: 3;
+}
+
+header > .container{
+	padding-top: 40px;
+}
+
+.logo{
+	width: 33.3%;
+	height: 40px;
+}
+
+.logo a{
+	text-decoration: none;
+	font-style: italic;
+	font-size: 30px;
+}
+
+div.pesquisar{
+	width:33.3%;
+	height: 40px;
+	position: relative;
+}
+
+div.pesquisar input{
+	width: 90%;
+	line-height: 30px;
+	outline: 0;
+	border-radius: 20px;
+	padding-left: 10px;
+	border:1px solid #ccc;
+	margin-top: 5px;
+}
+
+div.pesquisar a{
+	text-decoration: none;
+	color: white;
+}
+
+div.pesquisar a i{
+	padding: 10px;
+	border-radius: 20px;
+	position: absolute;
+	top: 50%;
+	left: 86%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+
+.telefone{
+	width:33.3%;
+	height: 40px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.telefone h4{
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.telefone a{
+	text-decoration: none;
+}
+
+/*header finalizado*/
+
+/*inicio do banner e card*/
+section.banner{
+	width: 100%;
+	min-height: 200px;
+	background-color: white;
+	border-bottom: 2px solid #ccc;
+	padding-top: 120px;
+	padding-bottom: 50px;
+}
+
+section.banner > .container .card-single{
+	width: calc(100% / 3 - 50px);
+	min-height: 100px;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	margin-left: 0;
+	margin-top: 45px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+section.banner > .container .card-single:last-of-type{
+	margin-right: 0px;
+}
+
+.card-single .barra-card{
+	width: 10px;
+	height: 100%;
+	margin-top: -1px;
+	margin-left: 5px;
+}
+
+.card-single .chamada-card{
+	width: 90%;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.chamada-card i{
+	padding-top: 10px;
+	color: #5953c8;
+	font-size: 30px;
+}
+
+/*baner e cards finalizados*/
+
+/*inicio da sessão de produtos*/
+
+section.produtos{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	padding-top: 30px;
+}
+
+section.produtos > .container{
+	height: 100%;
+}
+
+aside.sidebar{
+	width: 25%;
+	height: 100%;
+	background-color: #80cbc4 ;
+	border: 1px solid #cccc;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.sidebar h3{
+	width: 100%;
+	padding-top: 10%;
+	padding-left: 10%;
+}
+
+.sidebar form{
+	padding-top: 10%;
+	padding-left: 30%;
+	width: 100%;
+}
+
+.sidebar form input{
+	display: none;
+	margin-top: 10px;
+}
+
+.sidebar form label{
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+}
+.sidebar form label:before{
+	content: '';
+	height: 16px;
+	width: 16px;
+	border:1px solid #006064;
+	margin-right: 5px;
+	margin-bottom: 4px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	background-color: #039be5;
+}
+.sidebar form input:checked + label:before{
+	background-color: #01579b;
+	box-sizing: border-box;
+	border:2px solid #039be5;
+	padding:7px;
+}
+
+div.catalogo{
+	width: 75%;
+	height: 100%;
+	border: 1px solid #cccc;
+	background-color: #e0f2f1 ;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	padding: 20px;
+	overflow-y: scroll;
+}
+
+.catalogo .produto-single{
+	width: 180px;
+	border: 1px solid #ccc;
+	height: 280px;
+	margin: 20px auto 0 auto;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 2px 1px 5px 0 #cecece;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background-color: white;
+}
+
+.produto-single > .img{
+	width: 95%;
+	height: 50%;
+	margin: 5px auto;
+}
+
+.img img{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+}
+
+.produto-single h3{
+	text-decoration: underline;
+	padding-top: 7px;
+}
+
+.produto-single p{
+	margin-top: 4px;
+	font-weight: lighter;
+	color: #585858;
+}
+
+.produto-single .btncompra{
+	width: 100%;
+	max-width: 68%;
+	padding: 4px 10px;
+	margin: 8px auto 0 auto;
+	color: white;
+	border-radius: 20px;
+	text-decoration: none;
+}
+
+/*sessao de produtos finalizada*/
+
+/*inicio do footer*/
+body{
+}
+footer{
+	position: relative;
+    left: 0;
+    bottom: 0;
+	width: 100%;
+	height: auto;
+	min-height: 250px;
+	margin-top: 40px;
+}
+
+footer > .container{
+	flex-wrap: wrap;
+	padding-top: 35px;
+	max-width: 900px;
+	justify-content: center;
+}
+
+footer .barra-footer{
+	width: 100%;
+	height: 40px;
+	background-color: #3da8a3;
+}
+
+footer img{
+	width: 130px;
+}
+
+div.social1{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+footer > .container  i{
+	font-size: 30px;
+}
+
+footer > .container i a{
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/*media query*/
+
+@media screen and (max-width: 870px){
+
+	.logo a{
+		font-size: 22px;
+	}
+
+	div.pesquisar{
+		width:50%;
+		height: 40px;
+		position: relative;
+	}
+
+	div.pesquisar input{
+		width: 90%;
+	}
+
+	.telefone{
+		width:10%;
+		height: 40px;
+		text-align: center;
+		font-size: 12px;
+	}
+
+	.telefone h4{
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	.telefone a{
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	section.banner > .container .card-single{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.card-single .barra-card{
+		width: 20px;
+	}
+
+	aside.sidebar{
+		width: 100%;
+		height: auto;
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+
+	.sidebar h3{
+		width:50%;
+		padding-top: 50px;
+		padding-left: 50px;
+	}
+
+	.sidebar form{
+		padding-top: 40px;
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.sidebar form input{
+		margin-top: 10px;
+	}
+
+	div.catalogo{
+		width: 100%;
+		height: 80%;
+	}
+
+}
+
+@media screen and (max-width: 655px){
+	.logo a{
+		font-size: 20px;
+	}
+
+	div.pesquisar{
+		width:45%;
+	}
+
+	div.pesquisar input{
+		width: 90%;
+	}
+
+	.telefone{
+		width:15%;
+	}
+}
+
+@media screen and (max-width: 601px){
+
+	.logo a{
+		font-size: 16px;
+	}
+
+	div.pesquisar{
+		width:35%;
+	}
+
+	div.pesquisar input{
+		width: 90%;
+	}
+
+	.telefone{
+		width:25%;
+	}
+
+	.telefone h4{
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.telefone a{
+		text-decoration: none;
+	}
+
+	aside.sidebar{
+		width: 100%;
+		height: auto;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.sidebar h3{
+		width:100%;
+		padding-top: 10px;
+		padding-left: 20px;
+	}
+
+	.sidebar form{
+		text-align: left;
+		padding-top: 0;
+		padding-left: 0;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.sidebar form input{
+		margin-top: 5px;
+	}
+
+	.sidebar form label{
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 452px){
+	.catalogo .produto-single{
+		width: calc(100%/ 2 - 5px);
+		height: auto;
+		margin: 20px auto 0 auto;
+		flex-wrap: nowrap;
+	}
+}
+
+@media screen and (max-width: 410px){
+
+	header{
+		height: auto;
+		padding-bottom: 20px;
+	}
+
+	header > .container{
+		padding-top: 10px;
+		flex-direction: row;
+	}
+
+	.logo{
+		width: 100%;
+		text-align: center;
+	}
+
+	.logo a{
+		width: 100%;
+		padding-top: 0;	
+		order: 1;
+		font-size: 20px;
+	}
+
+	.telefone{
+		width:100%;
+		font-size: 10px;
+		order: 2;
+	}
+
+	.telefone h4{
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	.telefone a{
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	section.banner{
+		padding: 170px 0 20px 0;
+	}
+
+	section.banner > .container .card-single{
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	section.produtos{
+		height: 1300px;
+	}
+
+	section.produtos > .container{
+		height: 1300px;
+	}
+
+	div.pesquisar{
+		width: 100%;
+		padding-left: 20px;
+		order: 3;
+		margin-top: 15px;
+	}
+
+	div.pesquisar input{
+		width: 90%;
+	}
+
+	.sidebar h3{
+		width:100%;
+		padding-top: 10px;
+		padding-left: 20px;
+	}
+
+	.sidebar form input{
+		margin-top: 20px;
+	}
+
+	.sidebar form label{
+		font-size: 16px;
+	}
+
+	.catalogo .produto-single{
+		width: 150px;
+		height: 220px;
+	}
+
+	.produto-single > .img{
+		width: 95%;
+		height: 45%;
+		margin: 5px auto;
+	}
+
+	.produto-single h3{
+		font-size: 16px;
+		padding-top: 5px;
+	}
+
+	.produto-single p{
+		font-size: 13px;
+		margin-top: 0;
+		font-weight: normal;
+	}
+
+	.produto-single .btncompra{
+		max-width: 58%;
+		padding: 2px 2px;
+		border-radius: 10px;
+		font-size: 15px;
+	}
+}
